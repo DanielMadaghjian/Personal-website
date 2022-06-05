@@ -1,28 +1,24 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import './App.css';
 
 export function Main() {
     return (
         <div>
             
             <Header></Header>
-            <nav>
-                <Link to="Home">Home</Link>
-                <Link to="About">About</Link>
-                <Link to="MyWork">MyWork</Link>
-                <Link to="Contact">Contact</Link>
-            </nav><br/>
+            <Titles></Titles>
             
             <Footer></Footer>
         </div>
     )
 } 
-
+//test 
 export function Header() {
     return (
         <div>
         <header>
-            <center><h1>Daniel Madaghjian</h1></center>
+            <h1 class="App-header">Daniel Madaghjian</h1>
         </header>
         
         </div>
@@ -34,7 +30,7 @@ export function Footer() {
         <div>
             <Outlet></Outlet>
         <footer>
-            <br/><br/><center>Copyright 2022</center>
+            <br/><br/><p class = "App">Copyright 2022</p>
         </footer>
         
         </div>
@@ -42,6 +38,20 @@ export function Footer() {
     )
 }
 
+export function Titles() {
+    return (
+        <div>
+            <nav class = "App-titles">
+                <Link to="Home">Home</Link>
+                <Link to="About">About</Link>
+                <Link to="MyWork">MyWork</Link>
+                <Link to="Contact">Contact</Link>
+        </nav><br/>
+        
+        </div>
+        
+    )
+}
 export function Home() {
     return (
         <div>
