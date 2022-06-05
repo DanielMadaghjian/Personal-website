@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import {Routes, Route } from "react-router-dom";
-import {Main, Footer, Home, About, MyWork, Contact, Header} from './pages'
+import {Main, Header, Footer, Titles, Home, About, MyWork, Contact} from './pages'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
        <Route path="/" element={<Main></Main>}>
           <Route path="/" element={<Header></Header>}></Route>
           <Route path="/" element={<Footer></Footer>}></Route>
+          <Route path="/" element={<Titles></Titles>}></Route>
           <Route path="/Home" element={<Home></Home>}></Route>
           <Route path="/About" element={<About></About>}></Route>
           <Route path="/MyWork" element={<MyWork></MyWork>}></Route>
